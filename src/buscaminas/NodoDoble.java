@@ -1,7 +1,7 @@
 package buscaminas;
 
 /**
- *
+ * 
  * @author usuario
  */
 public class NodoDoble {
@@ -9,6 +9,10 @@ public class NodoDoble {
     private NodoDoble Li;
     private NodoDoble Ld;
 
+    /**
+     * Constructor. Crea un nodo doble con el dato indicado
+     * @param d Objeto que tendrá el nodo en el campo de dato
+     */
     public NodoDoble(Object d)
     {
         Li = null;

@@ -9,6 +9,13 @@ public class Tripleta {
     private int columna;
     private Object valor;
 
+    /**
+     * Constructor. Crea una tripleta con los datos indicados de fila, columna y
+     * valor
+     * @param fila Fila de la tripleta
+     * @param columna Columna de la tripleta
+     * @param valor Valor o dato de la tripleta
+     */
     public Tripleta(int fila, int columna, Object valor) {
         this.fila = fila;
         this.columna = columna;
