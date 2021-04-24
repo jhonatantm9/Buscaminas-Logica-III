@@ -4,6 +4,7 @@ import buscaminas.MatricesJuego;
 import buscaminas.Controlador;
 import buscaminas.NodoDoble;
 import buscaminas.Tripleta;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -63,6 +64,7 @@ public class FrmBuscaminas extends javax.swing.JFrame {
                 botones[i][j].setBounds(posXInicial + j*ancho, 
                             posYInicial + i*alto, ancho, alto);
                 botones[i][j].setFocusable(false);
+                botones[i][j].setForeground(new Color(20, 20, 20));
                 botones[i][j].addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -318,6 +320,8 @@ public class FrmBuscaminas extends javax.swing.JFrame {
         personalizadoMenu = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        panelBotones.setBackground(new java.awt.Color(153, 153, 255));
 
         javax.swing.GroupLayout panelBotonesLayout = new javax.swing.GroupLayout(panelBotones);
         panelBotones.setLayout(panelBotonesLayout);
