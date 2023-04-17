@@ -1,15 +1,16 @@
 package buscaminas;
 
+import java.io.Serializable;
 import java.util.Random;
-import java.lang.Math;
 
 /**
  *
  * @author usuario
  */
-public class MatricesJuego {
+public class MatricesJuego implements Serializable {
     public static MatrizEnForma1 minas;
     public static MatrizEnForma1 casillas;
+    public static final Random random = new Random(); 
     
     public MatricesJuego(int filas, int columnas, int numMinas){
         generarMinas(filas, columnas, numMinas);
@@ -27,8 +28,7 @@ public class MatricesJuego {
         minas.construyeNodosCabeza();
         casillas = new MatrizEnForma1(filas, columnas);
         casillas.construyeNodosCabeza();
-        int minasCreadas = 0;
-        Random random = new Random();            
+        int minasCreadas = 0;                   
         while(minasCreadas < numMinas){            
             int posFila = random.nextInt(filas) + 1;
             int posColumna = random.nextInt(columnas) + 1;
@@ -82,6 +82,9 @@ public class MatricesJuego {
                     posFila--;
                     posColumna--;
                     break; 
+                default:
+                    System.out.println("Entrada inválida");
+                    break;
             }
             //En caso de que la casilla esté en uno de los bordes del tablero
             if(posFila > casillas.numeroDeFilas() || posColumna > casillas.numeroDeColumnas()

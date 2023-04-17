@@ -217,7 +217,7 @@ public class FrmBuscaminas extends javax.swing.JFrame {
      * Cambia los labels de los botones que contienen minas por un "*"
      */
     private void mostrarMinas(){
-        ArrayList<Tripleta> minas = Controlador.casillasConMina();
+        ArrayList<Tripleta> minas = (ArrayList<Tripleta>) Controlador.casillasConMina();
         for(Tripleta t : minas){
             int fila = t.getFila() - 1;
             int columna = t.getColumna() - 1;

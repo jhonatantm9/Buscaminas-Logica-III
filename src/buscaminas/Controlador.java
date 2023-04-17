@@ -1,6 +1,7 @@
 package buscaminas;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *Clase intermedia, se encarga de realizar algunas acciones llamadas por la
@@ -35,7 +36,7 @@ public class Controlador {
      * que continen una mina en la matris minas de la clase MatricesJuego
      * @return 
      */
-    public static ArrayList casillasConMina(){
+    public static List<Tripleta> casillasConMina(){
         ArrayList<Tripleta> minas = new ArrayList<>();
         NodoDoble cabeza = MatricesJuego.minas.nodoCabeza();
         NodoDoble p = MatricesJuego.minas.primerNodo();
